@@ -1,7 +1,7 @@
 import requests
 
 def send_simple_message(subject, text):
-    mailgun_domain = 'sandbox98ebae98f8924ba7b83edc8ab6e49b08.mailgun.org'
+    mailgun_domain = 'mailgun@sandbox7da9f2084cb143caa2e92631ea99ad7f.mailgun.org'
     mailgun_api_key = 'MINHA_API_KEY'
     api_url = f"https://api.mailgun.net/v3/{mailgun_domain}/messages"
 
@@ -11,7 +11,7 @@ def send_simple_message(subject, text):
             auth=("api", mailgun_api_key),
             data={
                 "from": f"Aluno IFSP <mailgun@{mailgun_domain}>",
-                "to": ["igor.ramosc1@gmail.com", "flaskaulasweb@zohomail.com"],
+                "to": ["baldaviamarcelo@gmail.com", "flaskaulasweb@zohomail.com"],
                 "subject": subject,
                 "text": text
             })
